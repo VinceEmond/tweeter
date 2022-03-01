@@ -1,37 +1,64 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
+
+
+.new-tweet-upperhalf {
+  display: block;
+  height: 40px;
+  background-color: #888888;
+}
+
+.new-tweet-textbox {
+  display: flex;
+  resize: none;
+  font-weight: 550;
+  font-size: large;
+  background-color: #f0f0f0;
+  height: 92%;
+  width: 100%;
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+
+}
+
+
 
 .new-tweet-lowerhalf {
   display: flex;
   flex-direction: row;
+  align-items: center;
   font-family: 'Bungee', sans-serif;
   justify-content: space-between;
-  padding: 7px 7px;
+  margin: 8px;
+  border-top: 2px;
+
 }
 
 
 .new-tweet-lowerhalf-button {
-  background-color: #4CAF50;
   border: none;
   color: white;
-
   text-align: center;
+  border-radius: 4px;
   text-decoration: none;
   display: inline-block;
   background-color: #4056A1;
   font-size: 16px;
-
-  margin: 4px 2px;
-  cursor: pointer;
+  margin: 4px 4px;
+  padding: 3px 6px
 }
 
-#textbox {
+.new-tweet-lowerhalf-counter {
   display: flex;
-  resize: none;
-  font-weight: 600;
-  width: 100%;
-  
+  flex-direction: column;
+  font-size: medium;
+  color: #888888;
+
 }
+
 

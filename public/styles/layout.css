@@ -22,9 +22,8 @@ html {
  */
 
 body {
-
-  color: #ffffff;
-  background-color: #ce830a;
+background-color: ;
+  background-color: #f0f0f0;
 
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -39,7 +38,6 @@ body {
 .container {
   display: flexbox;
   font-size: 14px;
-  background-color: rgb(123, 123, 123);
   flex-direction: column;
   justify-content: center;
   align-items: center;

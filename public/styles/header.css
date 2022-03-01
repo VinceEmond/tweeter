@@ -1,32 +1,26 @@
 
-header {
-  display: flex;
-  color: white;
-  font-size: 30px;
-}
 
-.avatar {
-  padding-top: 100px;
+.header-avatar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+  padding-top: 100px;
   height: 400px;
-  width:100%;
   background-color: #c1b189;
+  color: white;
+  font-size: 30px;
   background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
 }
 
+.header-avatar-image {
+  margin-top: 10px;
+}
+.header-avatar-text {
+  margin: 14px;
+}
+
 .avatar-image {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-
-}
-.avatar-text {
-
-}
-
-#avaImage {
   height: 200px;
+  width: 210px;
+
 }

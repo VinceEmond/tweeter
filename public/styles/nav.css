@@ -1,7 +1,7 @@
 
 
 
-nav {
+.nav-bar {
   position: absolute;
   padding: 1.5em;
   display: flex;
@@ -14,19 +14,22 @@ nav {
   color: #FFFFFF;
 }
 
-.fa-angles-down {
-  color: red;
-  font-size: large;
-}
 
-.nav-right {
+
+.nav-bar-right {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
 
-.nav-left{
+.nav-bar-left{
   font-family: 'Bungee', sans-serif;
-  font-size: xx-large;
+  font-size: x-large;
+}
+
+
+.fa-angles-down {
+  color: red;
+  font-size: large;
 }
