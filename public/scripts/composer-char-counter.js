@@ -14,14 +14,10 @@ $(() => {
     // ********************************
     //$('.new-tweet-lowerhalf-counter').text(charCount);
     // const $counter = $(this).parent().siblings().first().children().last();
-    const $counter = $(this).parents('.new-tweet').find('.new-tweet-lowerhalf-counter');
+    const $counter = $(this).parents().find('.new-tweet-lowerhalf-counter');
 
-
-    if (charCount <= 0) {
-      $counter.style.color = "red";
-    }
+    charCount <= 0 ? $counter.addClass('addRed') : $counter.removeClass('addRed');
     $counter.text(charCount);
-
   });
 
 });
