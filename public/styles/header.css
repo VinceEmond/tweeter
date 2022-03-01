@@ -2,6 +2,7 @@
 header {
   display: flex;
   color: white;
+  font-size: 24px;
 }
 
 .avatar {
@@ -10,10 +11,9 @@ header {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  background-color: rgb(152, 159, 118);
   height: 400px;
   width:100%;
-  background-color: #a18d66;
+  background-color: #c1b189;
   background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
 }
 

@@ -22,16 +22,33 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
+
+  color: #ffffff;
+  background-color: #ce830a;
+
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.parent {
+/* main {
   display: flex;
-  flex-direction: row;
+  flex-direction: center;
+  margin: 0 auto;
+  background-color: aquamarine;
+} */
+
+.container {
+  display: flex;
+  font-size: 14px;
+  background-color: rgb(123, 123, 123);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+
 }
+
+
 
 
 
