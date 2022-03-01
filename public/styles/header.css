@@ -2,7 +2,7 @@
 header {
   display: flex;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .avatar {
@@ -21,6 +21,9 @@ header {
   display: flex;
   justify-content: center;
   justify-items: center;
+
+}
+.avatar-text {
 
 }
 

@@ -19,14 +19,14 @@ nav {
   font-size: large;
 }
 
-.nav-span-right {
+.nav-right {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.nav-span-left {
-  display:flex;
+.nav-left{
   font-family: 'Bungee', sans-serif;
   font-size: xx-large;
 }

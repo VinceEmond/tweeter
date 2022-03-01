@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +19,7 @@
     <link rel="stylesheet" href="styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -28,9 +32,11 @@
   <body>
       <!-- Top nav bar (fixed) -->
       <nav>
-        <span class="nav-span-left">tweeter</span>
-        <div class="nav-span-right">
-          <span ><strong>Write</strong> a new tweet</span>
+        <div class="nav-left">
+          <span>tweeter</span>
+        </div>
+        <div class="nav-right">
+          <span><strong>Write</strong> a new tweet</span>
           <i class="fa-solid fa-angles-down"></i>
         </div>
       </nav>
@@ -39,26 +45,30 @@
         <div class="avatar-image">
             <img id="avaImage" src="../public/images/profile-hex.png"> 
         </div>
-        <div>
-            <h2>Vince Emond</h2>
+        <br>
+        <div class="avatar-text">
+            <h2> <b>Vince</b> Emond</h2>
         </div>
       </header>
 
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <div>
-        <h3>What are you humming about?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio deserunt laborum quo, vel cupiditate tenetur error nisi blanditiis amet voluptas, placeat provident impedit dolorem distinctio modi adipisci id rerum atque?</p>
-      </div>
-      <div>
-        <h3>What are you humming about?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio deserunt laborum quo, vel cupiditate tenetur error nisi blanditiis amet voluptas, placeat provident impedit dolorem distinctio modi adipisci id rerum atque?</p>
-      </div>
-      <div>
-        <h3>What are you humming about?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio deserunt laborum quo, vel cupiditate tenetur error nisi blanditiis amet voluptas, placeat provident impedit dolorem distinctio modi adipisci id rerum atque?</p>
-      </div>
+
+      <section>
+        <form method="POST" action="/tweets/">
+          <div class="new-tweet">
+            <div>
+              <textarea id="textbox" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="new-tweet-lowerhalf">
+              <button class="new-tweet-lowerhalf-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </div>
+        </form>
+      </section>
+
     </main>
 
 
