@@ -1,0 +1,29 @@
+
+header {
+  display: flex;
+  color: white;
+}
+
+.avatar {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: rgb(152, 159, 118);
+  height: 400px;
+  width:100%;
+  background-color: #a18d66;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+}
+
+.avatar-image {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+
+}
+
+#avaImage {
+  height: 200px;
+}
