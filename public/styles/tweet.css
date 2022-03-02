@@ -73,7 +73,7 @@
   flex-direction: row;
   align-items: center;
   flex-grow: 2;
-  margin: 25px 25px;
+  margin: 5px 25px;
   font-size: large;
   font-weight: 700;
   color:var(--tweet-ui-grey);
