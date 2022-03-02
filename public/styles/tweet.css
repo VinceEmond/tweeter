@@ -16,7 +16,7 @@
   height: 200px;
   border: solid  var(--tweet-ui-grey);
   border-width: 3.5px;
-  margin: 40px 0px;
+  margin: 30px 0px;
 
 }
 
@@ -98,6 +98,11 @@
 
 }
 
+.tweet footer div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .tweet-footer-right {
   display: flex;
   margin: 4px;
@@ -109,7 +114,7 @@
 }
 
 .tweet-footer-right i {
-  font-size: x-small;
+  font-size: small;
   color: var(--tweet-icons);
 }
 
@@ -117,7 +122,6 @@
 .tweet-footer-left {
   font-weight: 600;
   font-size: 82%;
-  margin-left: 20px;
   margin-top: 10px;
   color:#6e6e6e;
 }
