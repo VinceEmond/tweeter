@@ -2,7 +2,10 @@
 
 
 .nav-bar {
-  position: absolute;
+  position: fixed;
+   top: 0;
+   left: 0;
+  /* position: absolute; */
   padding: 1.5em;
   display: flex;
   flex-direction: row;

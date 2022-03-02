@@ -20,13 +20,12 @@
 
 }
 
-.box-hover {
+
+
+.tweet:hover {
   box-shadow: 5px 5px 4px var(--box-shadow);
 }
 
-.icon-hover {
-  color: var(--tweet-icons-hover);
-}
 
 .tweet header {
   /* background-color: rgba(195, 255, 215, 0.788); */
@@ -118,6 +117,9 @@
   color: var(--tweet-icons);
 }
 
+.tweet-footer-right i:hover{
+  color: var(--tweet-icons-hover);
+}
 
 .tweet-footer-left {
   font-weight: 600;
