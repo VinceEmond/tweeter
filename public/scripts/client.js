@@ -8,56 +8,6 @@
 // WAIT TILL AFTER PAGE LOAD
 $(() => {
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        // "text": "If I have seen further it is by standing on the shoulders of giants"
-        "text": "Bacon ipsum dolor amet short ribs landjaeger drumstick ground round t-bone tongue cow chuck corned beef short loin meatloaf swine tenderloi."
-      },
-      "created_at": 1645982106211
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1646068506211
-    },
-    {
-      "user": {
-        "name": "Cheese Man",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@Cheeseman420"
-      },
-      "content": {
-        "text": "Queso pepper jack paneer. Squirty cheese danish fontina roquefort cheeseburger cheddar melted cheese when the cheese comes out everybody!"
-      },
-      "created_at": 1646068506211
-    },
-    {
-      "user": {
-        "name": "Jack the Pirate",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@JackPirate69"
-      },
-      "content": {
-        "text": "Prow scuttle parrel provost Sail ho shrouds spirits!"
-      },
-      "created_at": 1646068506211
-    }
-  ];
-
-
-
   const createTweetElement = function(tweetObj) {
     const {name, avatars, handle} = tweetObj.user;
     const {text} = tweetObj.content;
@@ -69,7 +19,9 @@ $(() => {
   
           <header>
             <div class="tweet-header-left">
-              <img class="tweet-avatar" src="https://www.seekpng.com/png/full/402-4022635_avatar-generic-person-icon.png"> 
+
+            <!--  <img class="tweet-avatar" src="${avatars}">-->
+            <img class="tweet-avatar" src="https://www.seekpng.com/png/full/402-4022635_avatar-generic-person-icon.png"> 
               <!--   <img class="tweet-avatar" src="../public/images/avatar-male.png"> -->
               <!--  <i class="fa-regular fa-face-grin-tongue-wink"></i> -->
               <p>${name}</p>
@@ -112,13 +64,9 @@ $(() => {
     event.preventDefault();
     const serializedText = $(this).serialize();
 
-    $.ajax({
-      url: '/tweets',
-      method: "POST",
-      data: serializedText
-    })
+    $.ajax({url: '/tweets', method: "POST", data: serializedText})
       .then(() => {
-        // console.log("Post sucess!");
+        console.log("Tweet AJAX post: sucess!");
       })
       .catch((error) => {
         console.log("Error:", error);
@@ -126,6 +74,71 @@ $(() => {
 
   });
 
-  renderTweets(data);
+
+  const loadTweets = function() {
+    $.ajax({url: '/tweets', method: "GET"})
+      .then((data)=> {
+        renderTweets(data);
+      })
+      .catch((error) => {
+        console.log("Error :", error);
+      });
+  };
+
+  loadTweets();
 
 });
+
+
+
+// ***********************************
+// Testing "fake" database bellow
+// ***********************************
+
+// const tweetDb = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png",
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       // "text": "If I have seen further it is by standing on the shoulders of giants"
+//       "text": "Bacon ipsum dolor amet short ribs landjaeger drumstick ground round t-bone tongue cow chuck corned beef short loin meatloaf swine tenderloi."
+//     },
+//     "created_at": 1645982106211
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1646068506211
+//   },
+//   {
+//     "user": {
+//       "name": "Cheese Man",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@Cheeseman420"
+//     },
+//     "content": {
+//       "text": "Queso pepper jack paneer. Squirty cheese danish fontina roquefort cheeseburger cheddar melted cheese when the cheese comes out everybody!"
+//     },
+//     "created_at": 1646068506211
+//   },
+//   {
+//     "user": {
+//       "name": "Jack the Pirate",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@JackPirate69"
+//     },
+//     "content": {
+//       "text": "Prow scuttle parrel provost Sail ho shrouds spirits!"
+//     },
+//     "created_at": 1646068506211
+//   }
+// ];
