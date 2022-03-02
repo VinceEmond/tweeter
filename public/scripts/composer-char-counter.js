@@ -8,6 +8,8 @@ $(() => {
 
   $textArea.on('input', function() {
     charCount = 140 - this.value.length;
+    
+    
 
     // ********************************
     // THREE WAYS TO DO THE SAME THING

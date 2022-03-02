@@ -5,7 +5,7 @@
  */
 
 
-// AFTER PAGE LOAD
+// WAIT TILL AFTER PAGE LOAD
 $(() => {
 
   const data = [
@@ -29,6 +29,28 @@ $(() => {
       },
       "content": {
         "text": "Je pense , donc je suis"
+      },
+      "created_at": 1646068506211
+    },
+    {
+      "user": {
+        "name": "Cheese Man",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@Cheeseman420"
+      },
+      "content": {
+        "text": "Queso pepper jack paneer. Squirty cheese danish fontina roquefort cheeseburger cheddar melted cheese when the cheese comes out everybody!"
+      },
+      "created_at": 1646068506211
+    },
+    {
+      "user": {
+        "name": "Jack the Pirate",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@JackPirate69"
+      },
+      "content": {
+        "text": "Prow scuttle parrel provost Sail ho shrouds spirits!"
       },
       "created_at": 1646068506211
     }
