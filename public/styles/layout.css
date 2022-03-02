@@ -22,17 +22,10 @@ html {
  */
 
 body {
-background-color: ;
   background-color: #f0f0f0;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* main {
-  display: flex;
-  flex-direction: center;
-  margin: 0 auto;
-  background-color: aquamarine;
-} */
 
 .container {
   display: flexbox;

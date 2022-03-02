@@ -1,40 +1,123 @@
+:root {
+  --tweet-ui-grey: #707070;
+  --box-shadow:#a8a7a7;
+  --tweet-handle: ##b3b3b3;
+  --tweet-icons: #4056A1;
+  --tweet-icons-hover: rgb(218, 188, 54);
+}
+
 
 .tweet {
+  /* background-color: rgba(255, 195, 195, 0.788); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  background-color: rgba(255, 195, 195, 0.788);
+  font-weight: 500;
   height: 200px;
-  border: solid  #888888;
+  border: solid  var(--tweet-ui-grey);
   border-width: 3.5px;
   margin: 40px 0px;
+
 }
 
+.box-hover {
+  box-shadow: 5px 5px 4px var(--box-shadow);
+}
+
+.icon-hover {
+  color: var(--tweet-icons-hover);
+}
 
 .tweet header {
+  /* background-color: rgba(195, 255, 215, 0.788); */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px;
-  background-color: rgba(195, 255, 215, 0.788);
+  margin: 14px;
   flex-grow: 1;
 
 }
-.tweet .middle {
-  background-color: rgba(195, 236, 255, 0.788);
-  flex-grow: 2;
+
+.tweet-header-left {
+  /* background-color: rgb(211, 166, 253); */
+  display: flex;
+  align-items: center;
+  font-size: large;
+  color:var(--tweet-ui-grey);
 }
+
+.tweet-header-left p{
+  margin: 13px;
+}
+
+.tweet header {
+  padding: 10px;
+}
+
+.tweet-header-right {
+  font-size: larger;
+  font-weight: 600;
+  color: #b3b3b3;
+
+}
+
+
+.tweet .fa-face-grin-tongue-wink{
+  font-size:  xX-large;
+  margin-left: 5px;
+}
+
+
+.tweet .middle {
+  /* background-color: rgba(195, 236, 255, 0.788); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 2;
+  margin: 25px 25px;
+  font-size: large;
+  font-weight: 700;
+  color:var(--tweet-ui-grey);
+}
+
+
 .tweet footer {
-  background-color: rgba(244, 255, 195, 0.788);
-  flex-grow: 0.7;
+  /* background-color: rgba(244, 255, 195, 0.788); */
+  display: flex;
+  flex-grow: 0.3;
+  justify-content: space-between;
+  align-items: start;
   width: 90%;
   margin: auto;
-  border: solid  #888888;
+  border: solid  var(--tweet-ui-grey);
   border-top-width: 3px;
   border-bottom-width: 0px;
   border-right-width: 0px;
   border-left-width: 0px;
   width: 96%;
 
+}
+
+.tweet-footer-right {
+  display: flex;
+  margin: 4px;
+}
+
+.tweet-footer-right p{
+  padding: 4px;
+
+}
+
+.tweet-footer-right i {
+  font-size: x-small;
+  color: var(--tweet-icons);
+}
+
+
+.tweet-footer-left {
+  font-weight: 600;
+  font-size: 82%;
+  margin-left: 20px;
+  margin-top: 10px;
+  color:#6e6e6e;
 }
