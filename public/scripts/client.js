@@ -59,7 +59,7 @@ $(() => {
     }
   };
 
-
+ 
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();
     const serializedText = $(this).serialize();
