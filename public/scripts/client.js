@@ -43,7 +43,8 @@ $(() => {
     const {name, avatars, handle} = tweetObj.user;
     const {text} = tweetObj.content;
     const timestampMs = tweetObj["created_at"];
-    const timeInDays = Math.round((Date.now() - timestampMs) / 86400000);
+    // const timeInDays = Math.round((Date.now() - timestampMs) / 86400000);
+    const timeInDays = timeago.format(timestampMs);
 
 
     const $tweet = $(`
@@ -66,7 +67,7 @@ $(() => {
   
           <footer>
             <div class="tweet-footer-left">
-              <p>${timeInDays} days ago</p>
+              <p>${timeInDays}</p>
             </div>
             <div class="tweet-footer-right">
               <p><i class="fa-solid fa-flag"></i></p>
