@@ -5,12 +5,10 @@
  */
 
 
+// AFTER PAGE LOAD
 $(() => {
 
-
-
-
-  const tweetsDb = [
+  const data = [
     {
       "user": {
         "name": "Newton",
@@ -36,24 +34,22 @@ $(() => {
     }
   ];
 
-  console.log("Hello from the client.js File!");
-  // console.log("tweetsDb.user", tweetsDb.user);
+
 
   const createTweetElement = function(tweetObj) {
     const {name, avatars, handle} = tweetObj.user;
     const {text} = tweetObj.content;
     const timestampMs = tweetObj["created_at"];
-    // const timeInDays = Math.round((Date.now() - timestampMs) / 86400000);
-    const timeInDays = timeago.format(timestampMs);
-
+    const timeSinceTweet = timeago.format(timestampMs);
 
     const $tweet = $(`
     <article class="tweet">
   
           <header>
             <div class="tweet-header-left">
-              <!-- <img class="tweet-avatar" src="../public/images/profile-hex.png">  -->
-              <i class="fa-regular fa-face-grin-tongue-wink"></i>
+              <img class="tweet-avatar" src="https://www.seekpng.com/png/full/402-4022635_avatar-generic-person-icon.png"> 
+              <!--   <img class="tweet-avatar" src="../public/images/avatar-male.png"> -->
+              <!--  <i class="fa-regular fa-face-grin-tongue-wink"></i> -->
               <p>${name}</p>
             </div>
             <div class="tweet-header-right">
@@ -67,7 +63,7 @@ $(() => {
   
           <footer>
             <div class="tweet-footer-left">
-              <p>${timeInDays}</p>
+              <p>${timeSinceTweet}</p>
             </div>
             <div class="tweet-footer-right">
               <p><i class="fa-solid fa-flag"></i></p>
@@ -83,6 +79,12 @@ $(() => {
     return $tweet;
   };
 
-  $('#tweets-container').prepend(createTweetElement(tweetsDb[0]));
+  const renderTweets = function(tweetsDatabase) {
+    for (const tweet of tweetsDatabase) {
+      $('#tweets-container').prepend(createTweetElement(tweet));
+    }
+  };
+
+  renderTweets(data);
 
 });

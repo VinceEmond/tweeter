@@ -32,7 +32,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 14px;
+  margin-bottom: 0px;
+  margin-left: 14px;
+  margin-right: 14px;
   flex-grow: 1;
 
 }
@@ -47,6 +49,11 @@
 
 .tweet-header-left p{
   margin: 13px;
+}
+
+.tweet-avatar {
+  max-width: 35px;
+  height: auto;
 }
 
 .tweet header {
