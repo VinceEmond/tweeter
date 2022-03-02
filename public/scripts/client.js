@@ -107,6 +107,32 @@ $(() => {
     }
   };
 
+
+
+
+  $('.new-tweet-form').submit(function(event) {
+    event.preventDefault();
+    // console.log("You pressed the submit button!");
+    // console.log("this value", this.text.value);
+    const $serializedText = $(this).serialize();
+    
+
+    
+    // $.ajax({
+    //   url: '/tweets',
+    //   method: "POST"
+    // })
+    //   .then(function(data) {
+    //     console.log("data", data);
+    //   })
+    //   .catch(function(error) {
+    //     console.log("Error:", error);
+
+    //   });
+
+    
+  });
+
   renderTweets(data);
 
 });
