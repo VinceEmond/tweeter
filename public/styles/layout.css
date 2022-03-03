@@ -40,13 +40,12 @@ body {
   justify-content: center;
   padding: 8px;
   color: red;
-  /* font-weight: 500; */
   font-weight: bold;
   font-size: large;
   width:100%;
-  border:solid red;
-  border-width: 6px;
-  opacity: 0.5;
+  border:solid rgba(255, 0, 0, 0.7);
+  border-width: 4px;
+
   border-radius: 2px;
   background-color: rgba(255, 0, 0, 0.05);
 }
