@@ -28,13 +28,31 @@ body {
 
 
 .container {
-  display: flexbox;
+  display: block;
   font-size: 14px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   width: 90%;
+
+}
+
+.validation-error {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  color: red;
+  /* font-weight: 500; */
+  font-weight: bold;
+  font-size: large;
+  width:100%;
+  border:solid red;
+  border-width: 6px;
+  opacity: 0.5;
+  border-radius: 2px;
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+
+.validation-error p{
 
 }
 

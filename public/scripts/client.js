@@ -8,11 +8,19 @@
 // WAIT TILL AFTER PAGE LOAD
 $(() => {
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweetObj) {
     const {name, avatars, handle} = tweetObj.user;
     const {text} = tweetObj.content;
     const timestampMs = tweetObj["created_at"];
     const timeSinceTweet = timeago.format(timestampMs);
+
+
 
     const $tweet = $(`
     <article class="tweet">
@@ -24,20 +32,20 @@ $(() => {
             <img class="tweet-avatar" src="https://www.seekpng.com/png/full/402-4022635_avatar-generic-person-icon.png"> 
               <!--   <img class="tweet-avatar" src="../public/images/avatar-male.png"> -->
               <!--  <i class="fa-regular fa-face-grin-tongue-wink"></i> -->
-              <p>${name}</p>
+              <p>${escape(name)}</p>
             </div>
             <div class="tweet-header-right">
-              <p >${handle}</p>
+              <p >${escape(handle)}</p>
             </div>
           </header>
   
           <div class="middle">
-            <p>${text}</p>
+            <p>${escape(text)}</p>
           </div>
   
           <footer>
             <div class="tweet-footer-left">
-              <p>${timeSinceTweet}</p>
+              <p>${escape(timeSinceTweet)}</p>
             </div>
             <div class="tweet-footer-right">
               <p><i class="fa-solid fa-flag"></i></p>
@@ -56,17 +64,37 @@ $(() => {
   const renderTweets = function(tweetsDatabase) {
     for (const tweet of tweetsDatabase) {
       $('#tweets-container').prepend(createTweetElement(tweet));
+
+      // $('#tweets-container').prepend(createTweetElement(tweet));
     }
   };
 
  
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();
+
+    // Catch if new tweet textarea is empty
+    if (!this.text.value) {
+      console.log("Error: No text has been input!");
+      alert("Error: No text has been input!");
+      return;
+    }
+
+    // Catch if new tweet textarea contains too many characters
+    if (this.text.value.length > 140) {
+      console.log("Error: You have entered too many characters!");
+      alert("Error: You have entered too many characters!");
+      return;
+    }
+
+
+    // Process AJAX POST request
     const serializedText = $(this).serialize();
 
     $.ajax({url: '/tweets', method: "POST", data: serializedText})
       .then(() => {
         console.log("Tweet AJAX post: sucess!");
+        loadTweets();
       })
       .catch((error) => {
         console.log("Error:", error);
@@ -77,7 +105,7 @@ $(() => {
 
   const loadTweets = function() {
     $.ajax({url: '/tweets', method: "GET"})
-      .then((data)=> {
+      .then(function(data) {
         renderTweets(data);
       })
       .catch((error) => {
@@ -87,7 +115,6 @@ $(() => {
 
   loadTweets();
 
-  
 });
 
 
