@@ -25,3 +25,18 @@
   width: 210px;
 
 }
+
+
+
+
+
+/* Tablets are commonly between 768px to 1024px. */
+
+/* A typical breakpoint to consider for desktop is 1024px and above. */
+
+@media only screen and (min-width: 1024px) {
+
+  .nav-bar{
+    background-color: blueviolet;
+  }
+}
