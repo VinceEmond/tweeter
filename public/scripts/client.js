@@ -61,6 +61,9 @@ $(() => {
     return $tweet;
   };
 
+
+
+
   const renderTweets = function(tweetsDatabase) {
     for (const tweet of tweetsDatabase) {
       $('#tweets-container').prepend(createTweetElement(tweet));
@@ -69,6 +72,15 @@ $(() => {
     }
   };
 
+
+  // $(".header-avatar-image").on("click", function() {
+  //   console.log("You clicked the avatar!");
+  // $(".new-tweet").slideUp("slow");
+  // window.scrollTo({
+  //   top: 200,
+  //   behavior: 'smooth',
+  // });
+  // });
  
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();
