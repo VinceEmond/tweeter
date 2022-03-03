@@ -73,14 +73,17 @@ $(() => {
   };
 
 
-  // $(".header-avatar-image").on("click", function() {
-  //   console.log("You clicked the avatar!");
-  // $(".new-tweet").slideUp("slow");
-  // window.scrollTo({
-  //   top: 200,
-  //   behavior: 'smooth',
-  // });
-  // });
+  $(".nav-bar-right").on("click", function() {
+    // console.log("You clicked the avatar!");
+    // $(".new-tweet").toggle("fast");
+    // $(".new-tweet").fadeTo("slow" , 0.5)
+    $(".new-tweet").slideToggle("slow");
+
+    // window.scrollTo({
+    //   top: 200,
+    //   behavior: 'smooth',
+    // });
+  });
  
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();

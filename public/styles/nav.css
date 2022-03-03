@@ -19,11 +19,31 @@
 
 
 
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+
+
 .nav-bar-right {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.fa-angles-down{
+  margin-top: 5px;
+  animation: bounce 0.5s infinite alternate;
+}
+
+.nav-bar-right:hover{
+  cursor: pointer;
 }
 
 .nav-bar-left{

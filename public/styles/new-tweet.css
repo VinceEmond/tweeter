@@ -52,6 +52,9 @@
   margin: 4px 4px;
   padding: 3px 6px
 }
+.new-tweet-lowerhalf-button {
+  cursor: pointer;
+}
 
 .new-tweet-lowerhalf-counter {
   display: flex;
