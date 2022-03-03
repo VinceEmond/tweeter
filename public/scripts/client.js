@@ -63,6 +63,23 @@ $(() => {
 
 
 
+  $(window).scroll(function() {
+    scrollFunction();
+  });
+
+  $(".back-to-top-cercle").on('click', function() {
+    $(window).scrollTop("top");
+    $(".new-tweet-textbox").focus();
+  });
+
+  const scrollFunction = function() {
+    if ($(window).scrollTop() > 400) {
+      $(".back-to-top").show();
+    } else {
+      $(".back-to-top").hide();
+    }
+  };
+
 
   const renderTweets = function(tweetsDatabase) {
     for (const tweet of tweetsDatabase) {
@@ -76,18 +93,23 @@ $(() => {
     //If not a top of page, go to top
     if ($(window).scrollTop() !== 0) {
       $(window).scrollTop("top");
+      $('.validation-error').slideUp(400);
+
 
       // Slide down the new tweet dialog and set focus
       $(".new-tweet").slideDown("slow").promise().done(() => {
         $(".new-tweet-textbox").focus();
+        $('.validation-error').slideUp(400);
       });
       
     // If already at top, toggle new tweet section
     } else {
+      $('.validation-error').slideUp(400);
       $(".new-tweet").slideToggle("slow").promise().done(() => {
         $(".new-tweet-textbox").focus();
       });
     }
+
 
   });
  
@@ -113,6 +135,7 @@ $(() => {
         // alert("Error: No text has been input!");
         $('.error-message').text("Error: No text has been input!");
         $('.validation-error').slideDown(400);
+        $(".new-tweet-textbox").focus();
         return;
       }
 
@@ -122,6 +145,7 @@ $(() => {
         // alert("Error: You have entered too many characters!");
         $('.error-message').text("Error: You have entered too many characters!");
         $('.validation-error').slideDown(400);
+        $(".new-tweet-textbox").focus();
         return;
       }
 
@@ -134,6 +158,7 @@ $(() => {
           // console.log("Tweet AJAX post: sucess!");
           this.text.value = "";
           $('.new-tweet-lowerhalf-counter').text("140");
+          $(".new-tweet-textbox").focus();
           loadTweets();
         })
         .catch((error) => {
@@ -149,6 +174,7 @@ $(() => {
     $.ajax({url: '/tweets', method: "GET"})
       .then(function(data) {
         renderTweets(data);
+        $(".new-tweet-textbox").focus();
       })
       .catch((error) => {
         console.log("Error :", error);

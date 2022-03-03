@@ -37,7 +37,7 @@
   align-items: center;
 }
 
-.fa-angles-down{
+.nav-bar-newtweet-animation{
   margin-top: 5px;
   animation: bounce 0.5s infinite alternate;
 }
@@ -52,7 +52,7 @@
 }
 
 
-.fa-angles-down {
+.nav-bar-newtweet-animation{
   color: red;
   font-size: large;
 }

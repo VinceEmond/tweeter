@@ -24,6 +24,7 @@
 
 .tweet:hover {
   box-shadow: 5px 5px 4px var(--box-shadow);
+  background-color: rgb(121, 121, 121, 0.05);
 }
 
 
