@@ -77,12 +77,24 @@ $(() => {
     // console.log("You clicked the avatar!");
     // $(".new-tweet").toggle("fast");
     // $(".new-tweet").fadeTo("slow" , 0.5)
-    $(".new-tweet").slideToggle("slow");
 
-    // window.scrollTo({
-    //   top: 200,
-    //   behavior: 'smooth',
-    // });
+
+    //If not a top of page, go to top
+    if ($(window).scrollTop() !== 0) {
+      $(window).scrollTop("top");
+
+      // Slide down the new tweet dialog and set focus
+      $(".new-tweet").slideDown("slow").promise().done(() => {
+        $(".new-tweet-textbox").focus();
+      });
+      
+    // If already at top, toggle new tweet section
+    } else {
+      $(".new-tweet").slideToggle("slow").promise().done(() => {
+        $(".new-tweet-textbox").focus();
+      });
+    }
+
   });
  
   $('.new-tweet-form').submit(function(event) {
