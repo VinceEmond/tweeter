@@ -67,17 +67,11 @@ $(() => {
   const renderTweets = function(tweetsDatabase) {
     for (const tweet of tweetsDatabase) {
       $('#tweets-container').prepend(createTweetElement(tweet));
-
-      // $('#tweets-container').prepend(createTweetElement(tweet));
     }
   };
 
 
   $(".nav-bar-right").on("click", function() {
-    // console.log("You clicked the avatar!");
-    // $(".new-tweet").toggle("fast");
-    // $(".new-tweet").fadeTo("slow" , 0.5)
-
 
     //If not a top of page, go to top
     if ($(window).scrollTop() !== 0) {
@@ -97,6 +91,16 @@ $(() => {
 
   });
  
+
+  // Setup textbox to submit on enter
+  // Allows for shift-enter to create a new line
+  $(".new-tweet-textbox").keypress(function(e) {
+    if (e.which === 13 && !e.shiftKey) {
+      e.preventDefault();
+      $(this).closest("form").submit();
+    }
+  });
+
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();
 
@@ -127,7 +131,9 @@ $(() => {
 
       $.ajax({url: '/tweets', method: "POST", data: serializedText})
         .then(() => {
-          console.log("Tweet AJAX post: sucess!");
+          // console.log("Tweet AJAX post: sucess!");
+          this.text.value = "";
+          $('.new-tweet-lowerhalf-counter').text("140");
           loadTweets();
         })
         .catch((error) => {
