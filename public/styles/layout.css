@@ -45,17 +45,9 @@ body {
   width:100%;
   border:solid rgba(255, 0, 0, 0.7);
   border-width: 4px;
-
   border-radius: 2px;
   background-color: rgba(255, 0, 0, 0.05);
 }
-
-
-.validation-error p{
-
-}
-
-
 
 
 /*

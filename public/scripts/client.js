@@ -73,32 +73,41 @@ $(() => {
   $('.new-tweet-form').submit(function(event) {
     event.preventDefault();
 
-    // Catch if new tweet textarea is empty
-    if (!this.text.value) {
-      console.log("Error: No text has been input!");
-      alert("Error: No text has been input!");
-      return;
-    }
+    // Slide-up Error message, THEN do the rest
+    $('.validation-error').slideUp(400, () => {
 
-    // Catch if new tweet textarea contains too many characters
-    if (this.text.value.length > 140) {
-      console.log("Error: You have entered too many characters!");
-      alert("Error: You have entered too many characters!");
-      return;
-    }
+      // Catch if new tweet textarea is empty
+      if (!this.text.value) {
+        console.log("Error: No text has been input!");
+        // alert("Error: No text has been input!");
+        $('.error-message').text("Error: No text has been input!");
+        $('.validation-error').slideDown(400);
+        return;
+      }
+
+      // Catch if new tweet textarea contains too many characters
+      if (this.text.value.length > 140) {
+        console.log("Error: You have entered too many characters!");
+        // alert("Error: You have entered too many characters!");
+        $('.error-message').text("Error: You have entered too many characters!");
+        $('.validation-error').slideDown(400);
+        return;
+      }
 
 
-    // Process AJAX POST request
-    const serializedText = $(this).serialize();
+      // Process AJAX POST request
+      const serializedText = $(this).serialize();
 
-    $.ajax({url: '/tweets', method: "POST", data: serializedText})
-      .then(() => {
-        console.log("Tweet AJAX post: sucess!");
-        loadTweets();
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-      });
+      $.ajax({url: '/tweets', method: "POST", data: serializedText})
+        .then(() => {
+          console.log("Tweet AJAX post: sucess!");
+          loadTweets();
+        })
+        .catch((error) => {
+          console.log("Error:", error);
+        });
+
+    });
 
   });
 
@@ -113,6 +122,7 @@ $(() => {
       });
   };
 
+  $('.validation-error').hide();
   loadTweets();
 
 });
