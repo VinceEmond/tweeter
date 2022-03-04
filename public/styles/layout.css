@@ -31,11 +31,6 @@ body {
   padding-bottom: 20px;
 }
 
-  body, head, nav {
-    min-width:425px; 
-    max-width:1400px;
-  }
-
 
 .page-footer {
   display: flex;
