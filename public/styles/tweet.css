@@ -89,7 +89,7 @@
 }
 
 
-.tweet footer {
+.tweet > footer {
   /* background-color: rgba(244, 255, 195, 0.788); */
   display: flex;
   flex-grow: 0.3;

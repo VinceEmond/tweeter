@@ -13,6 +13,7 @@ font-family: 'Source Sans Pro', sans-serif; */
 html {
   box-sizing: border-box;
   background-color: rgb(0, 0, 0);
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -26,18 +27,20 @@ body {
   background-color: #f0f0f0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
-
-  
+  height: 100%;
+  padding-bottom: 20px;
 }
 
   body, head, nav {
-    min-width:420px; 
+    min-width:425px; 
     max-width:1400px;
   }
 
 
-.header-avatar {
-
+.page-footer {
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
 }
 
 .container {
@@ -62,7 +65,7 @@ body {
 .back-to-top-cercle {
   position: fixed;
   bottom: 4vh;
-  right: 4vw;
+  right: 4vw; 
   z-index: 99;
   border: none;
   outline: none;
