@@ -33,7 +33,7 @@ $(() => {
             </div>
           </header>
   
-          <div class="middle">
+          <div class="tweet-text-body">
             <p>${escape(text)}</p>
           </div>
   
@@ -42,9 +42,9 @@ $(() => {
               <p>${escape(timeSinceTweet)}</p>
             </div>
             <div class="tweet-footer-right">
-              <p><i class="fa-solid fa-flag"></i></p>
-              <p><i class="fa-solid fa-retweet"></i></p>       
-              <p><i class="fa-solid fa-heart"></i></p>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>       
+              <i class="fa-solid fa-heart"></i>
             </div>
           </footer>
   
@@ -60,16 +60,16 @@ $(() => {
     scrollFunction();
   });
 
-  $(".back-to-top-cercle").on('click', function() {
+  $(".back-to-top-circle").on('click', function() {
     $(window).scrollTop("top");
     $(".new-tweet-textbox").focus();
   });
 
   const scrollFunction = function() {
     if ($(window).scrollTop() > 400) {
-      $(".back-to-top").show();
+      $(".back-to-top-wrapper").show();
     } else {
-      $(".back-to-top").hide();
+      $(".back-to-top-wrapper").hide();
     }
   };
 

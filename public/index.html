@@ -35,41 +35,35 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   </head>
 
-
   <body>
-      <!-- Top nav bar (fixed) -->
-      <nav class="nav-bar">
-        <div class="nav-bar-left">
-          <span>tweeter</span>
-        </div>
-        <div class="nav-bar-right">
-          <span class="nav-bar-tweeter-text"><strong>Write</strong> a new tweet</span>
-          <i class="fa-solid fa-angles-down nav-bar-newtweet-animation"></i>
-        </div>
-      </nav>
-      
-     
-      <!-- HEADER -->
-      <div class="header-wrapper">
-        <header class="header-texture-box">
-          <div class="header-avatar">
-              <img class="header-avatar-image" src="images/profile-hex.png"> 
-              <h2 class="header-avatar-text"><b>Vince</b> Emond</h2>
-          </div>
-        </header>
+    <!-- Top nav bar (fixed) -->
+    <nav class="nav-bar">
+      <div class="nav-bar-left">
+        <span>tweeter</span>
+       </div>
+      <div class="nav-bar-right">
+        <span class="nav-bar-tweeter-text"><strong>Write</strong> a new tweet</span>
+        <i class="fa-solid fa-angles-down nav-bar-newtweet-animation"></i>
       </div>
+    </nav>
+      
+    <!-- HEADER -->
+    <div class="header-wrapper">
+      <header class="header-texture-box">
+        <div class="header-avatar">
+          <img class="header-avatar-image" src="images/profile-hex.png"> 
+          <h2 class="header-avatar-text"><b>Vince</b> Emond</h2>
+        </div>
+      </header>
+    </div>
 
-
-    <!-- MAIN CONTENT OF PAGE -->
-    <main class="container">
+    <main class="main-container">
       
       <!-- ERROR MESSAGE SECTION-->
       <section class="validation-error">
         <span class="fa-solid fa-triangle-exclamation"></span>
         <span>&nbsp&nbsp&nbsp&nbsp</span>
-        <div class="error-message">
-          <p>ERROR MESSAGE HERE</p>
-        </div>
+          <p class="error-message">ERROR MESSAGE HERE</p>
         <span>&nbsp&nbsp&nbsp&nbsp</span>
         <span class="fa-solid fa-triangle-exclamation"></span>
       </section>
@@ -82,7 +76,7 @@
               </div>
               <div class="new-tweet-lowerhalf">
                 <button class="new-tweet-lowerhalf-button" type="submit">Tweet</button>
-                <output class="new-tweet-lowerhalf-counter" name="counter" class="counter" for="tweet-text">140</output>
+                <output class="new-tweet-lowerhalf-counter" name="counter" for="new-tweet-text-count">140</output>
               </div>
         </form>
       </section>
@@ -90,18 +84,18 @@
       <!-- TWEETS LOADED HERE -->
       <div ID='tweets-container'></div>
 
-      <div class="back-to-top">
-        <div class="back-to-top-cercle">
+      <!-- BACK TO TOP BUTTON  -->
+      <div class="back-to-top-wrapper">
+        <div class="back-to-top-circle">
           <i class="fa-solid fa-angles-down back-to-top-arrow"></i>
         </div>
       </div>
       
+      <!-- PAGE FOOTER -->
       <footer class="page-footer">
         <span>Made by <a href="https://www.vinceemond.com/">Vince Emond</a></span>
       </footer>
 
     </main>
   </body>
-
-  
 </html>

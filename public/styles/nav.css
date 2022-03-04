@@ -3,19 +3,14 @@
 
 .nav-bar {
   position: fixed;
-  /*
-   top: 0;
-   left: 0; */
-  /* position: absolute; */
   padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  width: 100%; 
+  background-color: var(--nav-background);
 }
 
 
