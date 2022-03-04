@@ -51,19 +51,16 @@
      
       <!-- HEADER -->
       <div class="header-wrapper">
-        <header class="header-avatar">
-          <div class="header-avatar-image">
-              <img class="avatar-image" src="images/profile-hex.png"> 
-          </div>
-
-          <div class="header-avatar-text">
-              <h2> <b>Vince</b> Emond</h2>
+        <header class="header-texture-box">
+          <div class="header-avatar">
+              <img class="header-avatar-image" src="images/profile-hex.png"> 
+              <h2 class="header-avatar-text"><b>Vince</b> Emond</h2>
           </div>
         </header>
       </div>
 
 
-    <!-- Page-specific (main) content here -->
+    <!-- MAIN CONTENT OF PAGE -->
     <main class="container">
       
       <!-- ERROR MESSAGE SECTION-->
@@ -77,9 +74,9 @@
         <span class="fa-solid fa-triangle-exclamation"></span>
       </section>
 
+      <!-- NEW TWEET SECTION-->
       <section class="new-tweet">
         <form class='new-tweet-form'>
-
               <div class="new-tweet-upperhalf">
                 <textarea class="new-tweet-textbox" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
               </div>
@@ -87,52 +84,22 @@
                 <button class="new-tweet-lowerhalf-button" type="submit">Tweet</button>
                 <output class="new-tweet-lowerhalf-counter" name="counter" class="counter" for="tweet-text">140</output>
               </div>
-
         </form>
       </section>
 
+      <!-- TWEETS LOADED HERE -->
+      <div ID='tweets-container'></div>
 
-      <div ID='tweets-container'>
-        <!-- <article class="tweet">
-
-          <header>
-            <div class="tweet-header-left">
-
-              <i class="fa-regular fa-face-grin-tongue-wink"></i>
-              <p>Rhonda Jacobs</p>
-            </div>
-            <div class="tweet-header-right">
-              <p >@TwitterHandle</p>
-            </div>
-          </header>
-
-          <div class="middle">
-            <p> Hello world!</p>
-          </div>
-
-          <footer>
-            <div class="tweet-footer-left">
-              <p>10 days ago</p>
-            </div>
-            <div class="tweet-footer-right">
-              <p><i class="fa-solid fa-flag"></i></p>
-              <p><i class="fa-solid fa-retweet"></i></p>       
-              <p><i class="fa-solid fa-heart"></i></p>
-            </div>
-          </footer>
-
-        </article> -->
-        <div class="back-to-top">
-          <!-- <i class="fa-solid fa-angles-down back-to-top-arrow"></i> -->
-          <!-- <span class="fa-solid fa-up-to-line back-to-top-arrow"></span> -->
-          <div class="back-to-top-cercle"><i class="fa-solid fa-angles-down back-to-top-arrow"></i></div>
+      <div class="back-to-top">
+        <div class="back-to-top-cercle">
+          <i class="fa-solid fa-angles-down back-to-top-arrow"></i>
         </div>
       </div>
       
-     
       <footer class="page-footer">
         <span>Made by <a href="https://www.vinceemond.com/">Vince Emond</a></span>
       </footer>
+
     </main>
   </body>
 

@@ -1,41 +1,40 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+:root {
+  --tweet-border: #707070;
+  --tweet-box-shadow:#a8a7a7;
+  --tweet-handle: ##b3b3b3;
+  --tweet-icons: #4056A1;
+  --tweet-icons-hover: rgb(218, 188, 54);
+  --back-to-top-icon: red;
+  --body-background:#f0f0f0;
+  --header-texture-box:#d6a437;
+  --header-avatar-text:white;
+}
 
 
-
-
- /* font-family: 'Bungee', cursive;
-font-family: 'Source Sans Pro', sans-serif; */
 
 html {
   box-sizing: border-box;
-  background-color: rgb(0, 0, 0);
   scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/**************
+ GLOBAL LAYOUT
+ *************/
 
 body {
-  background-color: #f0f0f0;
+  background-color: var(--body-background);
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   height: 100%;
   padding-bottom: 20px;
 }
 
-
 .page-footer {
   display: flex;
   justify-content: center;
-  /* background-color: red; */
 }
 
 .container {
@@ -44,18 +43,9 @@ body {
   width: 90%;
 }
 
-
 .back-to-top{
   display: none;
 }
-
-.back-to-top-arrow {
-  transform: rotate(180deg);
-
-  
-}
-
-
 
 .back-to-top-cercle {
   position: fixed;
@@ -64,7 +54,7 @@ body {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: var(--back-to-top-icon);
   opacity: 0.5;
   color: white;
   cursor: pointer;
@@ -75,6 +65,10 @@ body {
 
 .back-to-top-cercle:hover {
   opacity: 0.7;
+}
+
+.back-to-top-arrow {
+  transform: rotate(180deg);
 }
 
 .validation-error {

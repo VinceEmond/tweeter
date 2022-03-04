@@ -4,43 +4,35 @@
     background-color: transparent;
   }
 
+  .header-texture-box {
+    padding: 0;
+    height: 330px;
+  }
  
 }
 
 
 @media only screen and (min-width: 1024px) {
-  .nav-bar {
-    /* background-color: red; */
-    z-index: 99;
-    position:fixed;
-
-  }
 
   body {
     display: flex;
-   /* flex-direction: row;
-    justify-items: center;
-    margin: auto; */
-
   }
 
   .container {
     width: 100%;
     padding-top: 100px;
     padding-right: 20px;
-    flex-grow: 3;
+
   }
 
   .header-wrapper {
     display:flex;
-    flex-direction: row;
     justify-content: center;
     width: 70%;
     padding-top: 100px;
-    flex-grow: 1;
 }
 
-  .header-avatar {
+  .header-texture-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,14 +46,4 @@
     padding: 0px;
     margin: 40px;
   }
-
-}
-
-@media only screen and (min-width: 1400px) {
-
-  body, head, nav {
-    margin-left: auto;
-    margin-right: auto;
-  } 
-
 }
