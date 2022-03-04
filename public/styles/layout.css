@@ -31,7 +31,7 @@ body {
 }
 
   body, head, nav {
-    min-width:500px; 
+    min-width:420px; 
     max-width:1400px;
   }
 
