@@ -16,11 +16,8 @@ $(() => {
     // const $counter = $(this).parent().siblings().first().children().last();
     const $counter = $(this).parents().find('.new-tweet-lowerhalf-counter');
 
-    charCount <= 0 ? $counter.addClass('addRed') : $counter.removeClass('addRed');
+    charCount < 0 ? $counter.addClass('addRed') : $counter.removeClass('addRed');
     $counter.text(charCount);
   });
 
 });
-
-
-$('.new-tweet-lowerhalf-counter').text("140");

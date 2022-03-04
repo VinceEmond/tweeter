@@ -158,6 +158,7 @@ $(() => {
           // console.log("Tweet AJAX post: sucess!");
           this.text.value = "";
           $('.new-tweet-lowerhalf-counter').text("140");
+          $('.new-tweet-textbox').removeClass('addRed');
           $(".new-tweet-textbox").focus();
           loadTweets();
         })

@@ -6,13 +6,13 @@
    top: 0;
    left: 0;
   /* position: absolute; */
-  padding: 1.5em;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  width: 100vw;
+  width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
 }
@@ -29,6 +29,10 @@
 }
 
 
+.nav-bar-tweeter-text {
+  font-size: 16px;
+}
+
 
 .nav-bar-right {
   display: flex;
@@ -38,7 +42,7 @@
 }
 
 .nav-bar-newtweet-animation{
-  margin-top: 5px;
+  margin-top: 5%;
   animation: bounce 0.5s infinite alternate;
 }
 
@@ -48,11 +52,11 @@
 
 .nav-bar-left{
   font-family: 'Bungee', sans-serif;
-  font-size: x-large;
+  font-size: 24px;
 }
 
 
 .nav-bar-newtweet-animation{
   color: red;
-  font-size: large;
+  font-size: 18px;
 }

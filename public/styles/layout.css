@@ -24,6 +24,7 @@ html {
 body {
   background-color: #f0f0f0;
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
 }
 
 .header-avatar {
@@ -32,47 +33,37 @@ body {
 
 .container {
   display: block;
-  font-size: 14px;
   margin: 0 auto;
   width: 90%;
-
 }
-
- /* .back-to-top {
-  position: fixed;
-   top: 0;
-   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: rgba(255, 0, 0, 0.7);
-  border-radius: 50%;
-  display: inline-block;
-} */
 
 
 .back-to-top{
   display: none;
-
 }
 
 .back-to-top-arrow {
-  transform: rotate(180deg)
+  transform: rotate(180deg);
+
+  
 }
 
+
+
 .back-to-top-cercle {
-  position: fixed; /* Fixed/sticky position */
-  bottom: 30px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
+  position: fixed;
+  bottom: 4vh;
+  right: 4vw;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
   opacity: 0.5;
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 20px; /* Some padding */
-  border-radius: 100px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 100%;
+  font-size: 18px;
 }
 
 .back-to-top-cercle:hover {
@@ -82,7 +73,7 @@ body {
 .validation-error {
   display: flex;
   justify-content: center;
-  padding: 8px;
+  padding: 1%;
   color: rgba(255, 0, 0, 0.7);
   font-weight: normal;
   font-size: large;
@@ -104,9 +95,9 @@ body {
 
 /* A typical breakpoint to consider for desktop is 1024px and above. */
 
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
 
   .nav-bar{
     background-color: blueviolet;
   }
-}
+} */
