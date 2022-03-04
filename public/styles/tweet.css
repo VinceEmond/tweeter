@@ -1,6 +1,5 @@
 
 .tweet {
-  /* background-color: rgba(255, 195, 195, 0.788); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,7 +8,6 @@
   border: solid  var(--tweet-border);
   border-width: 3.5px;
   margin: 30px 0px;
-
 }
 
 .tweet:hover {
@@ -18,7 +16,6 @@
 }
 
 .tweet header {
-  /* background-color: rgba(195, 255, 215, 0.788); */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,11 +23,9 @@
   margin-left: 14px;
   margin-right: 14px;
   flex-grow: 1;
-
 }
 
 .tweet-header-left {
-  /* background-color: rgb(211, 166, 253); */
   display: flex;
   align-items: center;
   font-size: large;
@@ -54,7 +49,6 @@
   font-size: larger;
   font-weight: 600;
   color: #b3b3b3;
-
 }
 
 .tweet .fa-face-grin-tongue-wink{
@@ -63,7 +57,6 @@
 }
 
 .tweet-text-body {
-  /* background-color: rgba(195, 236, 255, 0.788); */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -82,7 +75,6 @@
 }
 
 .tweet > footer {
-  /* background-color: rgba(244, 255, 195, 0.788); */
   display: flex;
   flex-grow: 0.3;
   justify-content: space-between;

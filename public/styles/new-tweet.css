@@ -4,7 +4,6 @@
   margin-top: 30px;
 }
 
-
 .new-tweet-upperhalf {
   display: block;
   height: 50px;
@@ -23,10 +22,7 @@
   overflow: auto;
   outline: none;
   box-shadow: none;
-
 }
-
-
 
 .new-tweet-lowerhalf {
   display: flex;
@@ -36,12 +32,9 @@
   justify-content: space-between;
   margin: 8px;
   border-top: 2px;
-
 }
 
-
 .new-tweet-lowerhalf-button {
-
   color: white;
   text-align: center;
   border-radius: 4px;
@@ -52,6 +45,7 @@
   margin: 4px 4px;
   padding: 3px 6px
 }
+
 .new-tweet-lowerhalf-button {
   cursor: pointer;
 }
@@ -61,7 +55,6 @@
   flex-direction: column;
   font-size: medium;
   color: #888888;
-
 }
 
 .addRed {
