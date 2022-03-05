@@ -1,4 +1,4 @@
-<h1 align="center">TinyApp</h1>
+<h1 align="center">Tweeter</h1>
 
 ## Table Of Contents
 
