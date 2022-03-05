@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -23,7 +22,9 @@
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
     <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="styles/tweet.css" type="text/css" />
-    <link rel="stylesheet" href="styles/media.css" type="text/css" />
+    <link rel="stylesheet" href="styles/validation.css" type="text/css" />
+    <link rel="stylesheet" href="styles/backtotop.css" type="text/css" />
+    <link rel="stylesheet" href="styles/responsive.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -32,38 +33,38 @@
     <!-- App JS -->
     <script type="text/javascript" src="scripts/client.js"></script>
     <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
-
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- NAV BAR (FIXED) -->
     <nav class="nav-bar">
       <div class="nav-bar-left">
         <span>tweeter</span>
        </div>
       <div class="nav-bar-right">
-        <span class="nav-bar-tweeter-text"><strong>Write</strong> a new tweet</span>
+        <span><strong>Write</strong> a new tweet</span>
         <i class="fa-solid fa-angles-down nav-bar-newtweet-animation"></i>
       </div>
     </nav>
       
     <!-- HEADER -->
-    <div class="header-wrapper">
-      <header class="header-texture-box">
-        <div class="header-avatar">
+    <header class="header-wrapper">
+      <div class="header-texture-box">
+        <div class="header-avatar-wrapper">
           <img class="header-avatar-image" src="images/profile-hex.png"> 
           <h2 class="header-avatar-text"><b>Vince</b> Emond</h2>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
 
+    <!-- MAIN CONTAINER -->
     <main class="main-container">
-      
-      <!-- ERROR MESSAGE SECTION-->
+
+      <!-- VALIDATION ERROR MESSAGE SECTION-->
       <section class="validation-error">
         <span class="fa-solid fa-triangle-exclamation"></span>
         <span>&nbsp&nbsp&nbsp&nbsp</span>
-          <p class="error-message">ERROR MESSAGE HERE</p>
+          <p class="error-message">ERROR</p>
         <span>&nbsp&nbsp&nbsp&nbsp</span>
         <span class="fa-solid fa-triangle-exclamation"></span>
       </section>
@@ -71,13 +72,13 @@
       <!-- NEW TWEET SECTION-->
       <section class="new-tweet-wrapper">
         <form class='new-tweet-form'>
-              <div class="new-tweet-upperhalf">
-                <textarea class="new-tweet-textbox" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
-              </div>
-              <div class="new-tweet-lowerhalf">
-                <button class="new-tweet-lowerhalf-button" type="submit">Tweet</button>
-                <output class="new-tweet-lowerhalf-counter" name="counter" for="new-tweet-text-count">140</output>
-              </div>
+            <div class="new-tweet-upperhalf">
+              <textarea class="new-tweet-textbox" placeholder="What are you humming about?" name="text"></textarea>
+            </div>
+            <div class="new-tweet-lowerhalf">
+              <button class="new-tweet-lowerhalf-button" type="submit">TWEET</button>
+              <output class="new-tweet-lowerhalf-counter" name="counter" for="new-tweet-text-count">140</output>
+            </div>
         </form>
       </section>
 

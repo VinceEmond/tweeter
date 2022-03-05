@@ -1,8 +1,26 @@
+/****************************/
+/*         COLORS           */
+/****************************/
+
 :root {
   --body-background:#f0f0f0;
   --body-text-color:white;
 
   --nav-background:#4056A1;
+  --nav-bar-newtweet-animation: red;
+
+  --header-texture-box:#d6a437;
+  --header-avatar-text:white;
+
+  --error-text:rgba(255, 0, 0, 0.8);
+  --error-exclamations: rgba(255, 0, 0, 0.6);
+  --error-box:rgba(255, 0, 0, 0.6);
+
+  --new-tweet-textbox-background: #f0f0f0;
+  --new-tweet-textbox-underline: #888888;
+  --new-tweet-counter-text:#888888;
+  --new-tweet-submit-button:#4056A1;
+  --new-tweet-submit-button-text:white;
 
   --tweet-border: #707070;
   --tweet-box-shadow:#a8a7a7;
@@ -12,17 +30,14 @@
 
   --back-to-top-circle: red;
   --back-to-top-arrow: white;
-  
-  --header-texture-box:#d6a437;
-  --header-avatar-text:white;
-
-  --error-text:rgba(255, 0, 0, 0.8);
-  --error-exclamations: rgba(255, 0, 0, 0.6);
-  --error-box:rgba(255, 0, 0, 0.6);
 
   --page-footer-text: #4056A1;
-
 }
+
+
+/****************************/
+/*       GLOBAL LAYOUT      */
+/****************************/
 
 html {
   box-sizing: border-box;
@@ -31,10 +46,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/**************
- GLOBAL LAYOUT
- *************/
 
 body {
   background-color: var(--body-background);
@@ -49,48 +60,6 @@ body {
   display: block;
   margin: 0 auto;
   width: 90%;
-}
-
-.back-to-top-wrapper{
-  display: none;
-}
-
-.back-to-top-circle {
-  position: fixed;
-  bottom: 4vh;
-  right: 4vw; 
-  padding: 1.5rem;
-  border-radius: 100%;
-  background-color: var(--back-to-top-circle);
-  color: var(--back-to-top-arrow);
-  opacity: 0.5;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.back-to-top-circle:hover {
-  opacity: 0.7;
-}
-
-.back-to-top-arrow {
-  transform: rotate(180deg);
-}
-
-.fa-triangle-exclamation {
-  color:var(--error-exclamations);
-}
-
-.validation-error {
-  display: flex;
-  justify-content: center;
-  width:100%;
-  padding: 1%;
-  border-width: 3.5px;
-  border-radius: 4px;
-  color: var(--error-text);
-  border:solid var(--error-box);
-  font-weight: normal;
-  font-size: 18px;
 }
 
 .page-footer {

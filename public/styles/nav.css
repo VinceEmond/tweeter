@@ -1,5 +1,6 @@
-
-
+/****************************/
+/*      NAVIGATION BAR      */
+/****************************/
 
 .nav-bar {
   position: fixed;
@@ -13,7 +14,22 @@
   background-color: var(--nav-background);
 }
 
+.nav-bar-left{
+  font-family: 'Bungee', sans-serif;
+  font-size: 24px;
+}
 
+.nav-bar-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+}
+
+.nav-bar-right:hover{
+  cursor: pointer;
+}
 
 @keyframes bounce {
   from {
@@ -24,36 +40,9 @@
   }
 }
 
-
-.nav-bar-tweeter-text {
-  font-size: 18px;
-}
-
-
-.nav-bar-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .nav-bar-newtweet-animation{
   margin-top: 5%;
   animation: bounce 0.5s infinite alternate;
-}
-
-.nav-bar-right:hover{
-  cursor: pointer;
-}
-
-.nav-bar-left{
-  font-family: 'Bungee', sans-serif;
-  font-size: 24px;
-}
-
-
-.nav-bar-newtweet-animation{
-  color: red;
+  color: var(--nav-bar-newtweet-animation);
   font-size: 18px;
 }
-

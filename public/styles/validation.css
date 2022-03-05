@@ -1,0 +1,24 @@
+/****************************/
+/*  INPUT VALIDATION ERROR  */
+/****************************/
+
+.validation-error {
+  display: flex;
+  justify-content: center;
+  width:100%;
+  padding: 1%;
+  border-width: 3.5px;
+  border-radius: 4px;
+  color: var(--error-text);
+  border:solid var(--error-box);
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.fa-triangle-exclamation {
+  color:var(--error-exclamations);
+}
+
+.textColorRed {
+  color: red;
+}

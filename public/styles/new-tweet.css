@@ -1,3 +1,7 @@
+/****************************/
+/*         NEW TWEET        */
+/****************************/
+
 .new-tweet-wrapper {
   display: flex;
   flex-direction: column;
@@ -7,7 +11,7 @@
 .new-tweet-upperhalf {
   display: block;
   height: 50px;
-  background-color: #888888;
+  background-color: var(--new-tweet-textbox-underline);
 }
 
 .new-tweet-textbox {
@@ -15,7 +19,7 @@
   resize: none;
   font-weight: 550;
   font-size: large;
-  background-color: #f0f0f0;
+  background-color: var(--new-tweet-textbox-background);
   height: 92%;
   width: 100%;
   border: none;
@@ -35,18 +39,15 @@
 }
 
 .new-tweet-lowerhalf-button {
-  color: white;
+  color: var(--new-tweet-submit-button-text);
   text-align: center;
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
-  background-color: #4056A1;
+  background-color: var(--new-tweet-submit-button);
   font-size: 16px;
   margin: 4px 4px;
-  padding: 3px 6px
-}
-
-.new-tweet-lowerhalf-button {
+  padding: 3px 6px;
   cursor: pointer;
 }
 
@@ -54,11 +55,7 @@
   display: flex;
   flex-direction: column;
   font-size: medium;
-  color: #888888;
-}
-
-.addRed {
-  color: red;
+  color: var(--new-tweet-counter-text);
 }
 
 

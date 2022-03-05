@@ -1,3 +1,6 @@
+/****************************/
+/*          TWEET           */
+/****************************/
 
 .tweet {
   display: flex;
@@ -15,7 +18,7 @@
   background-color: rgb(121, 121, 121, 0.05);
 }
 
-.tweet header {
+.tweet > header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +26,7 @@
   margin-left: 14px;
   margin-right: 14px;
   flex-grow: 1;
+  padding: 10px;
 }
 
 .tweet-header-left {
@@ -32,28 +36,19 @@
   color:var(--tweet-border);
 }
 
-.tweet-header-left p{
+.tweet-header-left > p{
   margin: 13px;
 }
 
-.tweet-avatar {
+.tweet-header-avatar {
   max-width: 35px;
   height: auto;
-}
-
-.tweet header {
-  padding: 10px;
 }
 
 .tweet-header-right {
   font-size: larger;
   font-weight: 600;
   color: #b3b3b3;
-}
-
-.tweet .fa-face-grin-tongue-wink{
-  font-size:  xX-large;
-  margin-left: 5px;
 }
 
 .tweet-text-body {
@@ -69,7 +64,7 @@
   word-wrap: break-word;
 }
 
-.tweet-text-body p {
+.tweet-text-body > p {
   word-wrap: break-word;
   width: 90%;
 }
@@ -87,27 +82,11 @@
   border-right-width: 0px;
   border-left-width: 0px;
   width: 96%;
-
 }
 
-.tweet footer div {
+.tweet > footer > div {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-.tweet-footer-right {
-  display: flex;
-  margin: 4px;
-}
-
-.tweet-footer-right i {
-  font-size: small;
-  color: var(--tweet-icons);
-  padding: 4px;
-}
-
-.tweet-footer-right i:hover{
-  color: var(--tweet-icons-hover);
 }
 
 .tweet-footer-left {
@@ -116,3 +95,19 @@
   margin-top: 10px;
   color:#6e6e6e;
 }
+
+.tweet-footer-right {
+  display: flex;
+  margin: 4px;
+}
+
+.tweet-footer-right > i {
+  font-size: small;
+  color: var(--tweet-icons);
+  padding: 4px;
+}
+
+.tweet-footer-right > i:hover{
+  color: var(--tweet-icons-hover);
+}
+

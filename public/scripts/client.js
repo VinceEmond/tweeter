@@ -1,13 +1,14 @@
+/****************************/
+/*     AFTER HTML LOADS     */
+/****************************/
 
-/****************************/
-/*     AFTER PAGE LOADS     */
-/****************************/
 $(() => {
 
 
   /****************************/
   /*        VARIABLES         */
   /****************************/
+
   const $window = $(window);
   const $newTweetWrapper = $(".new-tweet-wrapper");
   const $newTweetTextBox = $(".new-tweet-textbox");
@@ -21,8 +22,54 @@ $(() => {
 
 
   /****************************/
+  /*      EVENT LISTENERS     */
+  /****************************/
+
+  $window.scroll(function() {
+    toggleBackToTopButton();
+  });
+
+  $backToTopButton.on('click', function() {
+    $window.scrollTop("top");
+    $newTweetTextBox.focus();
+  });
+
+  // Enable enter key to submit new tweets
+  // (Also allows for shift-enter to create a new line)
+  $newTweetTextBox.keypress(function(e) {
+    const enterKey = 13;
+    if (e.which === enterKey && !e.shiftKey) {
+      e.preventDefault();
+      $newTweetForm.submit();
+    }
+  });
+
+  $createNewTweetButton.on("click", function() {
+    //If not a top of page, go to top
+    if ($window.scrollTop() !== 0) {
+      $window.scrollTop("top");
+      $validationError.slideUp(400);
+
+      // Slide down the new tweet dialog and set focus
+      $newTweetWrapper.slideDown("slow").promise().done(() => {
+        $newTweetTextBox.focus();
+        $validationError.slideUp(400);
+      });
+      
+    // If already at top, toggle new tweet section
+    } else {
+      $validationError.slideUp(400);
+      $newTweetWrapper.slideToggle("slow").promise().done(() => {
+        $newTweetTextBox.focus();
+      });
+    }
+  });
+
+
+  /****************************/
   /*        FUNCTIONS         */
   /****************************/
+
   const escape = function(textString) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(textString));
@@ -38,17 +85,13 @@ $(() => {
     const $tweet = $(`
     <article class="tweet">
   
-          <header>
+          <header class="tweet-header-wrapper">
             <div class="tweet-header-left">
-
-            <!--  <img class="tweet-avatar" src="${avatars}">-->
-            <img class="tweet-avatar" src="https://www.seekpng.com/png/full/402-4022635_avatar-generic-person-icon.png"> 
-              <!--   <img class="tweet-avatar" src="../public/images/avatar-male.png"> -->
-              <!--  <i class="fa-regular fa-face-grin-tongue-wink"></i> -->
+              <img class="tweet-header-avatar" src="https://www.seekpng.com/png/full/402-4022635_avatar-generic-person-icon.png"> 
               <p>${escape(name)}</p>
             </div>
             <div class="tweet-header-right">
-              <p >${escape(handle)}</p>
+              <p>${escape(handle)}</p>
             </div>
           </header>
   
@@ -139,52 +182,10 @@ $(() => {
 
 
   /****************************/
-  /*      EVENT LISTENERS     */
-  /****************************/
-  $window.scroll(function() {
-    toggleBackToTopButton();
-  });
-
-  $backToTopButton.on('click', function() {
-    $window.scrollTop("top");
-    $newTweetTextBox.focus();
-  });
-
-  // Enable enter key to submit new tweets
-  // (Also allows for shift-enter to create a new line)
-  $newTweetTextBox.keypress(function(e) {
-    const enterKey = 13;
-    if (e.which === enterKey && !e.shiftKey) {
-      e.preventDefault();
-      $newTweetForm.submit();
-    }
-  });
-
-  $createNewTweetButton.on("click", function() {
-    //If not a top of page, go to top
-    if ($window.scrollTop() !== 0) {
-      $window.scrollTop("top");
-      $validationError.slideUp(400);
-
-      // Slide down the new tweet dialog and set focus
-      $newTweetWrapper.slideDown("slow").promise().done(() => {
-        $newTweetTextBox.focus();
-        $validationError.slideUp(400);
-      });
-      
-    // If already at top, toggle new tweet section
-    } else {
-      $validationError.slideUp(400);
-      $newTweetWrapper.slideToggle("slow").promise().done(() => {
-        $newTweetTextBox.focus();
-      });
-    }
-  });
-
-
-  /****************************/
   /*        INITIAL LOAD      */
   /****************************/
+
   $validationError.hide();
   loadTweets();
+  
 });

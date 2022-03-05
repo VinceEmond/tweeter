@@ -1,3 +1,6 @@
+/****************************/
+/*          HEADER          */
+/****************************/
 
 .header-texture-box {
   display: flex;
@@ -12,7 +15,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-.header-avatar {
+.header-avatar-wrapper {
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -27,9 +30,3 @@
 .header-avatar-text {
   margin: 14px;
 }
-
-
-
-
-
-
