@@ -34,36 +34,38 @@ Tweeter is a simple, single-page Twitter clone built upon an existing back-end p
 
 ## Screenshots
 
+
 * Desktop Layout
-!["Desktop Layout"]()
+!["Desktop Layout"](https://github.com/VinceEmond/tweeter/blob/main/public/images/Tweeter-desktop.png?raw=true)
 
 * Tablet Layout
-!["Screenshot of new URL page"]()
+<p align="center">
+<img src="https://github.com/VinceEmond/tweeter/blob/main/public/images/Tweeter-tablet.png?raw=true" width="600">
+</p>
 
 * Phone Layout
-!["Screenshot of URL Index page"]()
+<p align="center">
+<img src="https://github.com/VinceEmond/tweeter/blob/main/public/images/Tweeter-phone.png?raw=true" width="400">
+</p>
 
-* Errors
-!["Screenshot of URL show page"]()
 
 
 ## GIFs
 * Responsive Design
 
-![Desktop to Tablet and Back]()
+![Responsive Design](https://github.com/VinceEmond/tweeter/blob/main/public/images/tweeter-resize.gif?raw=true)
 
 * Submitting A New Tweet
 
-![Submitting A New Tweet]()
+![Submitting A New Tweet](https://github.com/VinceEmond/tweeter/blob/main/public/images/tweeter-validtweet.gif?raw=true)
 
 * Tweet Validation Error
 
-![Tweet Validation Error]()
-
+![Tweet Validation Error](https://github.com/VinceEmond/tweeter/blob/main/public/images/tweeter-error.gif?raw=true)
 
 * Subtle Hover Effects
 
-![Subtle Hover Effects]()
+![Subtle Hover Effects](https://github.com/VinceEmond/tweeter/blob/main/public/images/tweeter-hover.gif?raw=true)
 
 
 # Getting Started
