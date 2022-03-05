@@ -26,7 +26,7 @@ Tweeter is a simple, single-page Twitter clone built upon an existing back-end p
 * Clicking "new tweet" in the navigation bar scrolls to the top and automatically sets focus to the text box
 * Secondary red "back to top button" appears when scrolling further down the tweets
 * Can submit a tweet by pressing the enter key (no need to click submit)
-* Tweets have subtle shadows and color changes on hover
+* Tweets have subtle shadow and color changes on hover
 * Character counter turns red and prevents tweet submittion after 140 characters
 * Limited minimum window size to avoid deformation on very small screens
 
